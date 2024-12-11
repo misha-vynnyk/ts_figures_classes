@@ -11,7 +11,7 @@ export interface Figure {
 }
 
 export class Triangle implements Figure {
-  shape: 'triangle';
+  shape: 'triangle' = 'triangle';
 
   color: 'red' | 'green' | 'blue';
 
@@ -50,7 +50,7 @@ export class Triangle implements Figure {
 }
 
 export class Circle implements Figure {
-  shape: 'circle';
+  shape: 'circle' = 'circle';
 
   color: 'red' | 'green' | 'blue';
 
@@ -72,7 +72,7 @@ export class Circle implements Figure {
 }
 
 export class Rectangle implements Figure {
-  shape: 'rectangle';
+  shape: 'rectangle' = 'rectangle';
 
   color: 'red' | 'green' | 'blue';
 
@@ -99,7 +99,7 @@ export class Rectangle implements Figure {
 export function getInfo(figure: Figure): string {
   switch (figure.shape) {
     case 'rectangle':
-      return `A ${figure.color} rectangle - ${figure.getArea()}`;
+      return `A ${figure.color} rectangle - ${figure.getArea().toFixed()}`;
     case 'circle':
       return `A ${figure.color} circle - ${figure.getArea().toFixed(2)}`;
     case 'triangle':
